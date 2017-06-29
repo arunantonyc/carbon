@@ -1,0 +1,54 @@
+﻿@model carbon.Areas.Interest.Models.CompanyStores
+
+@{
+    ViewBag.Title = "Company Stores";
+}
+
+
+
+<table border="0" style="width:100%">
+    <tr>
+        <td>
+            <h3>@Html.DisplayFor(model => model.Title) </h3>        
+        </td>
+        <td style="text-align:right; vertical-align:bottom">
+            @Html.ActionLink("Edit", "Edit", new { id = Model.CompanyId }) | 
+            @Html.ActionLink("Back", "Index")
+        </td>
+    </tr>
+</table>
+
+<table class="table">
+    <tr>
+        <th>
+            Store
+        </th>
+        <th>
+            Landmark
+        </th>
+        <th>
+            Address
+        </th>
+        <th>@Html.ActionLink("Add", "StoreCreate", new { id = Model.CompanyId })</th>
+    </tr>
+
+    @foreach (var item in Model.Stores)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink(item.StoreName, "StoreDetails", new { id = item.StoreId })
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Landmark)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "StoreEdit", new { id = item.StoreId }) |
+                @Html.ActionLink("Delete", "StoreDelete", new { id = item.StoreId })
+            </td>
+        </tr>
+    }
+
+</table>

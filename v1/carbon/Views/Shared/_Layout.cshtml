@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false">
+    </script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("FindMySale", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Location", "LocationPoi", "Home", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Brands", "Companies", "Interest", new { area = "" }, null)</li>                    
+                </ul>
+                <div id="partialLoginView">
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid body-content">
+        @RenderBody()
+
+        <footer class="panel-footer text-right">
+            <p>&copy; @DateTime.Now.Year - <i>nu</i> systems. All rights reserved.</p>
+        </footer>
+    </div>
+
+   
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    
+    <script>
+        $(document).ready(function () {            
+            var loc = window.location.pathname;            
+            var lastSlash = loc.lastIndexOf("/");
+            loc = loc.substr(lastSlash);
+            if (loc == "/") { loc = "/Home"; }
+            if (loc == "/Companies") { loc = "/Brands"; } // DAU - later
+            
+            $(".navbar .navbar-nav > li").each(function () {
+                //alert($(this).text());
+                if (loc.match($(this).text())) { // software is the name of the page/slug
+                    $(this).addClass("active");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

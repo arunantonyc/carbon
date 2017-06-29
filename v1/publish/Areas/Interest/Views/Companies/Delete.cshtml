@@ -1,0 +1,47 @@
+﻿@model carbon.Areas.Interest.Models.Company
+
+@{
+    ViewBag.Title = "Delete Brand";
+}
+
+<table border="0" style="width:100%">
+    <tr>
+        <td>
+            <h3>Brand: @Html.DisplayFor(model => model.Title) </h3>
+        </td>
+        <td style="text-align:right; vertical-align:bottom">
+            @Html.ActionLink("Back", "Index")
+        </td>
+    </tr>
+</table>
+
+<h4>Confirm delete of this brand?</h4>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+    </dl>    
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+
+                <input type="submit" value="Delete" class="btn btn-default" />
+        </div>
+    }
+</div>

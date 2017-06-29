@@ -1,0 +1,17 @@
+﻿
+
+
+<ul class="nav navbar-nav navbar-right">
+    <li role="separator" class="divider-vertical"></li>
+    <li>
+        @{
+            var userKey = Request.Cookies["fms"];
+            if (userKey != null) { 
+                Html.ActionLink(userKey.Value, "Index", "Home");
+            }
+        }
+        @*@Html.ActionLink("Hello "+ @ViewBag.MyCookie + "!", "Index", "Manage", routeValues: new { area = "" }, htmlAttributes: new { title = "Manage" })
+        *@
+    </li> 
+    
+</ul>

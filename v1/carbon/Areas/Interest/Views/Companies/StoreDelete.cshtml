@@ -1,0 +1,67 @@
+﻿@model carbon.Areas.Interest.Models.Store
+
+@{
+    ViewBag.Title = "Delete Store";
+}
+
+<table border="0" style="width:100%">
+    <tr>
+        <td>
+            <h3>Store: @Html.DisplayFor(model => model.StoreName)</h3>
+        </td>
+        <td style="text-align:right; vertical-align:bottom">
+            @Html.ActionLink("Back", "Details", new { id = Model.CompanyId })
+        </td>
+    </tr>
+</table>
+
+<h4>Confirm delete?</h4>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Landmark)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Landmark)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            Timing:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpenTime) - @Html.DisplayFor(model => model.CloseTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Delete" class="btn btn-default" />
+            </div>
+        </div>
+    }
+    <hr/>
+</div>

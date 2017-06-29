@@ -1,0 +1,14 @@
+﻿@*@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}*@
+<div class="h1">
+    <div>
+        <p id="map" style="height:400px"/>
+    </div>
+    <p />
+    <table style="font-size:small">
+        <tr><td>Location :</td><td id="CurrLoc"></td></tr>
+    </table>    
+</div>
+
+@Scripts.Render("~/scripts/mapScript.js")

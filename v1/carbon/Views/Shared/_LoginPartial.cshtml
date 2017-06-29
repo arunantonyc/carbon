@@ -1,0 +1,21 @@
+﻿
+
+
+<ul class="nav navbar-nav navbar-right">
+    <li role="separator" class="divider-vertical"></li>
+    <li>
+        @{
+            var userKey = Request.Cookies["fms"];
+            if (userKey != null)
+            {
+                <div style="margin:13px">
+                    <div class="badge" id="partialLoginKey">@userKey.Value</div>
+                </div>
+                @*@Html.ActionLink("Hi " + userKey.Value, "Index", "Manage", routeValues: new { area = "" }, htmlAttributes: new { title = "Manage" })*@
+                }
+                }
+                @*@Html.ActionLink("Hello "+ @ViewBag.MyCookie + "!", "Index", "Manage", routeValues: new { area = "" }, htmlAttributes: new { title = "Manage" })
+                *@
+</li> 
+    
+</ul>

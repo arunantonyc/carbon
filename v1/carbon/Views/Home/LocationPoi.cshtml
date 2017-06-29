@@ -1,0 +1,112 @@
+﻿
+<div id="map" style="height:100vh;">Loading...</div>
+  
+<div id="interestPanel" class="panel panel-primary" >
+    <div class="panel-heading" id="getInfo1" data-toggle="collapse" href="#poiPanelBody">
+        <table>
+            <tr><td style="width:100%">Stores</td><td style="text-align:right"><span id="poiCtr" class="badge" >0</span></td></tr>
+        </table>
+    </div>
+    <div id="poiPanelBody" class="panel-collapse collapse">
+        <table class="table-condensed table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        <div >Store</div>
+                    </th>
+                    <th>
+                        Time
+                    </th>
+                    <th>
+                        Dist.
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="poiList"></tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="poiDetail" role="dialog" aria-labelledby="storeName">
+    <div class="modal-dialog modal-sm" role="document" >
+        <!-- Modal content-->
+        <div class="modal-content ">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" id="storeName">Store</h4>
+            </div>
+            <div class="modal-body">
+                <ul class="list-group">
+                    <li class="list-group-item-heading">Where: <span id="trvlDist"></span> km. in <span id="trvlTime"></span> min</li>
+                    <li class="list-group-item-text">&#9993; <span id="poiAddrs"></span> </li>                   
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="loginDetail" role="dialog" aria-labelledby="loginName">
+    <div class="modal-dialog modal-xs" role="document">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button style="background-color:white" type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Login</h4>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <label style="width:60px">Identity</label>
+                    <input id="modal-loginKey" type="text" placeholder="Email/Mobile"/>  
+                    
+                                      
+                </div>
+                <div>
+                    <label style="width:60px">Password</label>
+                    <input id="modal-loginPwd" type="text" placeholder="Password" />
+                </div>
+                <div style="margin-left:65px">
+                    <div id="loginSubmit" class="btn btn-primary btn-xs">Login</div>
+                    <div id="logoutSubmit" class="btn btn-info btn-xs">Logout</div>
+                    <div id="skipSubmit" class="btn btn-warning btn-xs">Skip</div>
+                </div>
+                
+                <p/>
+                <hr />
+                <h3>Register</h3>
+                <p/>
+                <div>
+                    <label style="width:60px">Identity</label>
+                    <input id="modal-newloginKey" type="text" placeholder="Email/Mobile" />
+                </div>
+                <div>
+                    <label style="width:60px">Name</label>
+                    <input id="modal-newloginName" type="text" placeholder="Optional" />
+                </div>
+                <div>
+                    <label style="width:60px">Password</label>
+                    <input id="modal-newloginPwd" type="text" placeholder="Password" />
+                </div>
+                <p />
+                <div style="margin-left:65px">                    
+                    <div id="registerSubmit" class="btn btn-info btn-xs">Register</div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<input type="hidden" id="main-userKey">
+
+<table style="font-size:small; width:100%" border="0">
+    <tr><td >Status :</td><td id="status"></td><td id="feed" style="text-align:right"></td></tr>
+</table>
+
+@Scripts.Render("~/scripts/poiCalc.js")
+
+
+<!--<div style="float: left;"></div>
+    
+    
+    -->
