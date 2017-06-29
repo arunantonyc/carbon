@@ -1,0 +1,6 @@
+C:\Projects\carbon2\carbonlib\bin\Debug\carbonlib.dll
+C:\Projects\carbon2\carbonlib\bin\Debug\carbonlib.pdb
+C:\Projects\carbon2\carbonlib\obj\Debug\carbonlib.dll
+C:\Projects\carbon2\carbonlib\obj\Debug\carbonlib.pdb
+C:\Projects\carbon2\carbonlib\bin\Debug\MySql.Data.dll
+C:\Projects\carbon2\carbonlib\obj\Debug\carbonlib.csprojResolveAssemblyReference.cache

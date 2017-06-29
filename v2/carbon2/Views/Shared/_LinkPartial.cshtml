@@ -1,0 +1,42 @@
+﻿
+
+<!-- User Links List -->
+<div id="linksPanel" class="panel panel-primary">
+    <div class="panel-heading" data-toggle="collapse" href="#linksPanelBody">
+        <table>
+            <tr>
+                <td style="width:100%">Links<span id="linksCtr" style="margin-left:5px" class="badge">0</span></td>
+
+                <td><button id="addLink" class="btn btn-xs"><span class="glyphicon glyphicon-plus" title="Add Link"></span></button></td>
+            </tr>
+        </table>
+    </div>
+    <div id="linksPanelBody" class="panel-collapse collapse">
+        <table class="table-condensed table-hover">
+            <tbody id="linksList"></tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Add Link Modal Window-->
+<div id="modal-linkAdd" class="modal fade" role="dialog" aria-labelledby="Add-Link">
+    <div class="modal-dialog modal-sm" role="document">
+        <!-- Modal content-->
+        <div class="modal-content ">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add Link</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row" style="margin-left:10px">
+                    <label>Link:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input id="addLinkKey" type="text" placeholder="Email/Mobile" />
+                    <button id="addLinkSubmit" type="button" class="btn btn-primary btn-xs" aria-label="Add Link">
+                        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <p/>               
+            </div>
+        </div>
+    </div>
+</div>

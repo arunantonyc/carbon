@@ -1,0 +1,51 @@
+﻿<ul class="nav navbar-nav navbar-right">
+    <li role="separator" class="divider-vertical"></li>
+    <li>
+        @*<div id="partialUser" style="margin:13px">
+            <div class="btn btn-default" id="partialLoginName"></div>
+            <div class="badge" id="partialLoginKey"></div>
+            <button id="logoutSubmit" type="button" class="btn btn-primary btn-xs" aria-label="Logout">
+                <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+            </button>
+        </div>*@
+
+        <div id="partialLogin" class="dropdown" style="margin:10px">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span id="partialLoginName">Login</span>
+                <span id="partialLoginKey"></span>
+                <span>&nbsp;&nbsp;</span>
+                <span id="partialLoginCaret" class="caret"></span>
+            </button>
+            <ul id="partialUserOptions" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">Account</a></li>
+                <li role="separator" class="divider"></li>
+                <li id="logoutSubmit" style="margin-left:3px">
+                    <button  type="button" class="btn btn-primary btn-xs" aria-label="Logout">
+                        <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>                        
+                    </button>
+                    <span>Logout</span>
+                </li>
+            </ul>
+        </div>
+    </li>
+</ul>
+
+@*
+
+@{
+            var userKey = Request.Cookies["fms"];
+            if (userKey != null)
+            {
+                var cookieVal = userKey.Value;//.Split(new string[]{"%3B"}, StringSplitOptions.None);
+        <div id="partialUser" style="margin:13px">
+            <div class="btn btn-default" id="partialLoginName">@cookieVal</div>
+            <div class="badge" id="partialLoginKey"></div>
+            <button id="logoutSubmit" type="button" class="btn btn-primary btn-xs" aria-label="Logout">
+                <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+            </button>
+        </div>
+                @Html.ActionLink("Hi " + userKey.Value, "Index", "Manage", routeValues: new { area = "" }, htmlAttributes: new { title = "Manage" })
+    }
+}
+@Html.ActionLink("Hello "+ @ViewBag.MyCookie + "!", "Index", "Manage", routeValues: new { area = "" }, htmlAttributes: new { title = "Manage" })
+*@

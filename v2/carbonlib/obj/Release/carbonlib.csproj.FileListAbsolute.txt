@@ -1,0 +1,5 @@
+C:\Projects\carbon2\carbonlib\bin\Release\carbonlib.dll
+C:\Projects\carbon2\carbonlib\bin\Release\carbonlib.pdb
+C:\Projects\carbon2\carbonlib\bin\Release\MySql.Data.dll
+C:\Projects\carbon2\carbonlib\obj\Release\carbonlib.dll
+C:\Projects\carbon2\carbonlib\obj\Release\carbonlib.pdb

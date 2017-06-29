@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+}
+
+<div class="jumbotron">
+    <div class="container-fluid">
+        <p/>
+        <div class="column" >        
+            <img style="margin:15px" src="~/Images/Site/logo128.png" />
+            <span class="h1" style="margin:15px">
+                Fyongo
+            </span>                        
+        </div>
+        
+    </div>
+</div>
+<div class="col-md-12">
+    <a href="~/home/map" class="btn btn-primary btn-lg">Locate me &raquo;</a>
+</div>
+<hr/>
+<div class="row">
+    <div class="col-sm-6">
+        <h3>Find on the go</h3>
+        <p class="text-muted">Find out what you like around your current location instanteously, as you prowl around your city. We analyse and give you the services in your vicinity in real-time.</p>
+        <p><a class="btn btn-default" href="">Know more &raquo;</a></p>
+    </div>
+    <div class="col-sm-6">
+        <h3>About</h3>
+        <p class="text-muted">This is a free web site to help you find when you are on the move. It can filter on tags, brands, travelling time, locality, etc. for your preference and even share with your friends.</p>
+        <p><a class="btn btn-default" href="">About us &raquo;</a></p>
+    </div>
+</div>
+
+<hr />
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Contact Us</h2>
+                <h4 class="text-muted">Send us your valuable feedback.</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <form name="sentMessage" id="contactForm" novalidate>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <textarea class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message." rows="6"></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-lg-12 text-center">
+                            <div id="success"></div>
+                            <button type="submit" class="btn btn-xl">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
